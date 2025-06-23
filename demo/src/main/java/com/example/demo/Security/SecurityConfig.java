@@ -46,8 +46,6 @@ public class SecurityConfig {
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         // Diğer tüm istekler kimlik doğrulaması ister
                         .anyRequest().authenticated()
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
-
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // JWT filtresini UsernamePasswordAuthenticationFilter'dan önce ekle
