@@ -13,7 +13,7 @@ import java.util.Date;
 public class JwtUtil {
 
 
-    private final String SECRET = "gizliKey123gizliKey123gizliKey123!!";
+    private final String SECRET = "";
     private final SecretKey SECRET_KEY = Keys.hmacShaKeyFor(SECRET.getBytes());
 
     public String generateToken(UserDetails userDetails) {
